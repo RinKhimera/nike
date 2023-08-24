@@ -20,8 +20,8 @@ const config: Config = {
     },
     extend: {
       fontFamily: {
-        palanquin: ["Palanquin", "sans-serif"],
-        montserrat: ["Montserrat", "sans-serif"],
+        montserrat: ["var(--font-montserrat)"],
+        palanquin: ["var(--font-palanquin)"],
       },
       colors: {
         primary: "#ECEEFF",
