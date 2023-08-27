@@ -1,8 +1,13 @@
 import Image, { StaticImageData } from "next/image"
 import { SetStateAction } from "react"
 
+type Shoe = {
+  bigShoe: StaticImageData
+  thumbnail: StaticImageData
+}
+
 type ShoecardProps = {
-  imgURL: any
+  imgURL: Shoe
   changeBigShoeImage: (shoe: SetStateAction<StaticImageData>) => void
   bigShoeImg: StaticImageData
 }
