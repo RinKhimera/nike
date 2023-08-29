@@ -6,6 +6,7 @@ type ButtonProps = {
   backgroundColor: string
   borderColor: string
   textColor: string
+  fullWidth: boolean
 }
 
 const Button = ({
@@ -14,9 +15,17 @@ const Button = ({
   backgroundColor,
   borderColor,
   textColor,
+  fullWidth,
 }: ButtonProps) => {
   return (
-    <button className="flex items-center justify-center gap-2 rounded-full border-coral-red bg-coral-red px-7 py-4 font-montserrat text-lg leading-none text-white">
+    <button
+      className={`flex items-center justify-center gap-2 border px-7 py-4 font-montserrat text-lg leading-none
+      ${
+        backgroundColor
+          ? `${backgroundColor} ${textColor} ${borderColor}`
+          : "border-coral-red bg-coral-red text-white"
+      } rounded-full ${fullWidth && "w-full"}`}
+    >
       {label}
       {iconURL && (
         <Image
