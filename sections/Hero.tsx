@@ -37,6 +37,7 @@ const Hero = () => {
           backgroundColor={""}
           borderColor={""}
           textColor={""}
+          fullWidth={false}
         />
 
         <div className="mt-20 flex w-full flex-wrap items-start justify-start gap-16">

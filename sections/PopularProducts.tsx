@@ -1,9 +1,26 @@
+"use client"
+
 import PopularProductCard from "@/components/PopularProductCard"
 import { products } from "@/constants"
+import { motion } from "framer-motion"
+
+const animate = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+  },
+}
 
 const PopularProducts = () => {
   return (
-    <section id="products" className="max-container max-sm:mt-12">
+    <motion.section
+      id="products"
+      className="max-container max-sm:mt-12"
+      variants={animate}
+      initial="hidden"
+      animate="visible"
+      transition={{ duration: 1 }}
+    >
       <div className="flex flex-col justify-start gap-5">
         <h2 className="font-palanquin text-4xl font-bold">
           Our <span className="text-coral-red">Popular</span> Products
@@ -19,7 +36,7 @@ const PopularProducts = () => {
           <PopularProductCard key={product.name} {...product} />
         ))}
       </div>
-    </section>
+    </motion.section>
   )
 }
 
