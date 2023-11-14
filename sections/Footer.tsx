@@ -58,7 +58,7 @@ const Footer = () => {
             height={20}
             className="m-0 rounded-full"
           />
-          <p>Copyright. All rights reserved.</p>
+          <p>© 2023 Samuel Pokam. All rights reserved.</p>
         </div>
         <p className="cursor-pointer font-montserrat">Terms & Conditions</p>
       </div>
